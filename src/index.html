@@ -51,7 +51,7 @@
   <div class="wrap">
     <h2>Naše práce</h2>
     <ul role="list" class="galeria">
-      {% for n,alt in [('0001','Modrý obklad na toalete s bordúrou'),('0002','Vaňa s umývadlom a krémovým obkladom'),('0006','Sprchový kút s béžovými dlaždicami'),('0010','Umývadlo s obloženou policou'),('0012','Stena z kamenného obkladu nad dlažbou'),('0015','Umývadlo na skrinke s oranžovým obkladom'),('0019','Obložený pult pod umývadlom'),('0025','Rohová vaňa obložená zelenými dlaždicami'),('0026','Umývadlo a vaňa so zelenou bordúrou'),('0034','Rohová vaňa v tmavom obklade'),('0036','Umývadlo na drevenej skrinke'),('0037','Sprchový kút so sklenenými tvárnicami'),('0040','Dlažba v obytnej miestnosti')] %}
+      {% for n,alt in [('0001','Modrý obklad na toalete s bordúrou'),('0002','Vaňa s umývadlom a krémovým obkladom'),('0006','Sprchový kút s béžovými dlaždicami'),('0010','Umývadlo s obloženou policou'),('0012','Stena z kamenného obkladu nad dlažbou'),('0015','Umývadlo na skrinke s oranžovým obkladom'),('0019','Obložený pult pod umývadlom'),('0026','Umývadlo a vaňa so zelenou bordúrou'),('0037','Sprchový kút so sklenenými tvárnicami'),('0040','Dlažba v obytnej miestnosti')] %}
       <li>{{ img('p-pstav' ~ n ~ '.jpg', alt, sizes='(min-width: 60rem) 15rem, 50vw') }}</li>
       {% endfor %}
     </ul>
