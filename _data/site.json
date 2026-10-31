@@ -1,0 +1,51 @@
+{
+  "slug": "sk-p-pstav",
+  "nazev": "P-Pstav – Peter Kubiš",
+  "url": "https://webhunter-navrhy.github.io/sk-p-pstav/",
+  "base": "/sk-p-pstav/",
+  "lang": "sk",
+  "popis": "P-Pstav, Považská Bystrica: kompletné rekonštrukcie bytov a rodinných domov, prerábky bytových jadier, murárske, obkladačské a inštalačné práce.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "hero.jpg",
+  "logo": "",
+  "theme_color": "#0b1620",
+  "typ": "HomeAndConstructionBusiness",
+  "ico": "37716395",
+  "kontakt": {
+    "email": "info@p-pstav.sk",
+    "telefon": "+421 907 74 74 94",
+    "adresa": {
+      "ulice": "",
+      "psc": "",
+      "mesto": "Považská Bystrica",
+      "zeme": "SK"
+    }
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "",
+  "formular": {
+    "endpoint": "",
+    "demo": true,
+    "predmet": "Dopyt z webu P-Pstav"
+  },
+  "nav": [
+    {
+      "text": "Služby",
+      "href": "#sluzby"
+    },
+    {
+      "text": "Cenník",
+      "href": "#cennik"
+    },
+    {
+      "text": "Naše práce",
+      "href": "#prace"
+    },
+    {
+      "text": "Kontakt",
+      "href": "#kontakt"
+    }
+  ]
+}

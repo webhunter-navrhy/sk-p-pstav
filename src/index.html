@@ -1,0 +1,72 @@
+{% extends "_base.html" %}
+{% set titulek = 'Rekonštrukcie bytov a bytových jadier, Považská Bystrica – P-Pstav' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-gr">
+    <div class="hero-text">
+      <p class="stitok">Považská Bystrica a okolie</p>
+      <h1>Rekonštrukcie bytov a kúpeľní od základov po poslednú škáru</h1>
+      <p class="uvod">Búranie, murovanie, rozvody, obklady aj dlažba z jednej ruky. Cenu dostanete písomne vopred, pred začiatkom prác.</p>
+      <p><a class="tlacitko" href="#kontakt">Nezáväzný dopyt</a> <a class="tlacitko druhe" href="#cennik">Orientačná cena</a></p>
+    </div>
+    <div class="dlazba" aria-hidden="false">
+      {{ img('p-pstav0034.jpg', 'Rohová vaňa s obkladom z tmavých dlaždíc', sizes='(min-width: 60rem) 30rem, 50vw', cls='d1') }}
+      {{ img('p-pstav0025.jpg', 'Rohová vaňa obložená zelenými dlaždicami', sizes='(min-width: 60rem) 15rem, 50vw', cls='d2') }}
+      {{ img('p-pstav0036.jpg', 'Umývadlo na drevenej skrinke pred tmavým obkladom', sizes='(min-width: 60rem) 15rem, 50vw', cls='d3') }}
+      {{ img('p-pstav0040.jpg', 'Položená dlažba v miestnosti', sizes='(min-width: 60rem) 30rem, 50vw', cls='d4') }}
+    </div>
+  </div>
+</section>
+
+<section class="sekce skara" id="sluzby">
+  <div class="wrap">
+    <h2>Čo pre vás urobíme</h2>
+    <p class="poznamka uvod2">Pracujeme na kompletných rekonštrukciách bytov a rodinných domov aj na samostatných prerábkach bytových jadier.</p>
+
+    <ul role="list" class="plocha">
+      {% for s in data.sluzby %}<li>{{ img(s.foto, s.alt, sizes='(min-width: 48rem) 8rem, 6rem') }}<h3>{{ s.nazev }}</h3></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sekce svetla" id="cennik">
+  <div class="wrap cennik">
+    <div class="cena">
+      <h2>Koľko to stojí</h2>
+      <p class="mala">Orientačne rekonštrukcia jadra</p>
+      <p class="velka">1 000 – 1 200 €</p>
+      <p class="mala">Konečná cena závisí od typu jadra. Každú ponuku pripravujeme osobitne a písomne.</p>
+      <p><a class="tlacitko" href="#kontakt">Nezáväzný dopyt</a></p>
+    </div>
+    <ul role="list" class="fakty">
+      <li><h3>Cena vopred</h3><p>Dostanete ju písomne ešte pred začiatkom prác.</p></li>
+      <li><h3>Jedna ruka</h3><p>Od búrania po obklady, bez naháňania viacerých remeselníkov.</p></li>
+      <li><h3>Čisté napojenia</h3><p>Voda, elektrika a sadrokartón ladia s obkladom.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sekce skara" id="prace">
+  <div class="wrap">
+    <h2>Naše práce</h2>
+    <ul role="list" class="galeria">
+      {% for n,alt in [('0001','Modrý obklad na toalete s bordúrou'),('0002','Vaňa s umývadlom a krémovým obkladom'),('0006','Sprchový kút s béžovými dlaždicami'),('0010','Umývadlo s obloženou policou'),('0012','Stena z kamenného obkladu nad dlažbou'),('0015','Umývadlo na skrinke s oranžovým obkladom'),('0019','Obložený pult pod umývadlom'),('0025','Rohová vaňa obložená zelenými dlaždicami'),('0026','Umývadlo a vaňa so zelenou bordúrou'),('0034','Rohová vaňa v tmavom obklade'),('0036','Umývadlo na drevenej skrinke'),('0037','Sprchový kút so sklenenými tvárnicami'),('0040','Dlažba v obytnej miestnosti')] %}
+      <li>{{ img('p-pstav' ~ n ~ '.jpg', alt, sizes='(min-width: 60rem) 15rem, 50vw') }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sekce tmava" id="kontakt">
+  <div class="wrap kontakt">
+    <div>
+      <h2>Napíšte nám o svojom byte</h2>
+      <p>Stačí pár slov, čo chcete prerobiť. Ozveme sa s návrhom ďalšieho kroku.</p>
+      <p class="kont"><a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a></p>
+      <p class="kont"><a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a></p>
+    </div>
+    {% include "_formular.html" %}
+  </div>
+</section>
+{% endblock %}
